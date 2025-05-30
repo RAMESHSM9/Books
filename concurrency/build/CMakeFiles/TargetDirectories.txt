@@ -1,0 +1,6 @@
+/home/ramesh/Desktop/1RN12CS074/Books/concurrency/build/CMakeFiles/edit_cache.dir
+/home/ramesh/Desktop/1RN12CS074/Books/concurrency/build/CMakeFiles/rebuild_cache.dir
+/home/ramesh/Desktop/1RN12CS074/Books/concurrency/build/chapter1/CMakeFiles/Hello_world.dir
+/home/ramesh/Desktop/1RN12CS074/Books/concurrency/build/chapter1/CMakeFiles/ThreadCreation.dir
+/home/ramesh/Desktop/1RN12CS074/Books/concurrency/build/chapter1/CMakeFiles/edit_cache.dir
+/home/ramesh/Desktop/1RN12CS074/Books/concurrency/build/chapter1/CMakeFiles/rebuild_cache.dir
