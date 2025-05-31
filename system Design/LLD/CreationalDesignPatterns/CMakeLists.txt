@@ -1,2 +1,2 @@
 add_subdirectory(Singleton)
-#add_subdirectory(Builder)
+add_subdirectory(Builder)
