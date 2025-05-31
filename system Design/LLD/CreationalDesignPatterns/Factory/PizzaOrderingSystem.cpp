@@ -26,6 +26,7 @@ public:
   void cut() { cout << "Cutting cheese pizza" << endl; }
   void box() { cout << "Boxing cheese pizza" << endl; }
   void pizzaInfo() { cout << "Enjoy!! cheese pizza" << endl; }
+  ~CheesePizza() {}
 };
 
 class PepperoniPizza : public Pizza {
@@ -35,6 +36,7 @@ public:
   void cut() { cout << "Cutting Pepperoni pizza" << endl; }
   void box() { cout << "Boxing Pepperoni pizza" << endl; }
   void pizzaInfo() { cout << "Enjoy!! Pepperoni pizza" << endl; }
+  ~PepperoniPizza() {}
 };
 
 class VeggiePizza : public Pizza {
@@ -44,6 +46,7 @@ public:
   void cut() { cout << "Cutting Veggie pizza" << endl; }
   void box() { cout << "Boxing Veggie pizza" << endl; }
   void pizzaInfo() { cout << "Enjoy!! Veggie pizza" << endl; }
+  ~VeggiePizza() {}
 };
 /*
 class PizzaFactory {
