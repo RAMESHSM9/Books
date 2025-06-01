@@ -1,3 +1,3 @@
 add_subdirectory(Adapter)
 add_subdirectory(FlyWeight)
-add_subdirectory(Builder)
+add_subdirectory(Decorator)
