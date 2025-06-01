@@ -5,3 +5,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED YES)
 project(LLD)
 
 add_subdirectory(CreationalDesignPatterns)
+add_subdirectory(StructuralDesignPatterns)
