@@ -6,3 +6,4 @@ project(LLD)
 
 add_subdirectory(CreationalDesignPatterns)
 add_subdirectory(StructuralDesignPatterns)
+add_subdirectory(Problems)
