@@ -1,33 +1,44 @@
 #include <bits/stdc++.h>
+#include <climits>
 #include <stdexcept>
 using namespace std;
 
-//@ TC - O(1) and SC - O(N)+O(N) = O(2N)
+//@ Encoded Approach - releationship between numbers
+//@ EncodedValue = 2*newValue-currentMin, if(newValue<currentMin)
+//@ TC - O(1) and SC- O(N)
 //@ implementing a stack using standard librar stack
 //@ supporting push, pop, top, size, empty and getMin in TC O(1)
 template <typename T> class Stack {
 private:
   stack<T> st;
-  stack<T> minStack;
+  int currentMinEle = INT_MAX;
 
 public:
   Stack() {}
   void push(T value) {
 
-    st.push(value);
-
-    if (minStack.empty() || minStack.top() >= value) {
-      minStack.push(value);
+    if (st.empty() || value > currentMinEle) {
+      st.push(value);
+      if (currentMinEle == INT_MAX)
+        currentMinEle = value;
+    } else {
+      //@ store the encode = 2*newValue - currentMin
+      int newMin = 2 * value - currentMinEle;
+      st.push(newMin);
+      currentMinEle = value;
     }
   }
 
   void pop() {
     if (!st.empty()) {
-      T ST_top = st.top();
+      int topVal = st.top();
       st.pop();
 
-      if (!minStack.empty() && ST_top == minStack.top()) {
-        minStack.pop();
+      if (topVal < currentMinEle) {
+        //@ update the previous Min element
+        //@ because popped element is encoded element
+        int prevMin = 2 * currentMinEle - topVal;
+        currentMinEle = prevMin;
       }
     } else {
       throw std::out_of_range("Stack Underflow");
@@ -40,14 +51,17 @@ public:
 
   T top() {
     if (!st.empty()) {
+      if (st.top() < currentMinEle) {
+        return currentMinEle;
+      }
       return st.top();
     }
     throw std::out_of_range("Stack underflow");
   }
 
   T getMin() {
-    if (!minStack.empty())
-      return minStack.top();
+    if (!st.empty())
+      return currentMinEle;
     throw std::out_of_range("Stack underflow");
   }
 };
